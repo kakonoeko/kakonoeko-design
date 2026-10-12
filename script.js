@@ -42,7 +42,7 @@ function selectProject(number, moveFocus = false) {
     if (selected && moveFocus) tab.focus();
   });
   document.getElementById('project-panel').setAttribute('aria-labelledby', `tab-${number}`);
-  document.getElementById('project-image').src = `assets/repariko-${number}.png`;
+  document.getElementById('project-image').src = `assets/repariko-${number}-limpia.jpg`;
   document.getElementById('project-image').alt = `Página de ${project.name.toLowerCase()} de Repariko`;
   document.querySelector('#project-panel .project-image-button').setAttribute('aria-label', `Ampliar captura: ${project.name} de Repariko`);
   document.getElementById('project-number').textContent = `0${number} / ${project.name.toUpperCase()}`;
@@ -68,7 +68,7 @@ function showCapture(number) {
   const project = projects[number - 1];
   document.getElementById('capture-dialog-title').textContent = `Repariko · ${project.name}`;
   const image = document.getElementById('capture-dialog-image');
-  image.src = `assets/repariko-${number}.png`;
+  image.src = `assets/repariko-${number}-limpia.jpg`;
   image.alt = `Captura completa de la página de ${project.name.toLowerCase()} de Repariko`;
   captureDialog.showModal();
 }
