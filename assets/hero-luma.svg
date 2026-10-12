@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Luma, diseño de una web de arquitectura e interiores</title>
+  <desc id="desc">Una portada en tonos crema y verde con el titular Espacios para vivir mejor, una ilustración arquitectónica y un botón para descubrir proyectos.</desc>
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e9ddc8"/><stop offset="1" stop-color="#c8b999"/></linearGradient>
+    <linearGradient id="light" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#f6efe3"/><stop offset="1" stop-color="#d3c6b0"/></linearGradient>
+    <linearGradient id="shade"><stop stop-color="#c5b69a"/><stop offset="1" stop-color="#e9dfcf"/></linearGradient>
+    <clipPath id="arch"><path d="M738 586V313a135 135 0 0 1 270 0v273Z"/></clipPath>
+  </defs>
+  <rect width="1200" height="800" fill="#f7f5ef"/>
+  <g fill="#283e35" font-family="Arial, Helvetica, sans-serif">
+    <text x="62" y="77" font-size="46" font-weight="700" letter-spacing="-3">luma.</text>
+    <text x="62" y="99" font-size="9" letter-spacing="2.2">ARQUITECTURA &amp; INTERIORES</text>
+    <g font-size="12"><text x="600" y="73">El estudio</text><text x="716" y="73">Proyectos</text><text x="831" y="73">Nuestra mirada</text></g>
+    <rect x="1006" y="43" width="135" height="46" rx="23" fill="none" stroke="#283e35"/>
+    <text x="1031" y="71" font-size="12">Hablemos</text><text x="1110" y="72" font-size="17">↗</text>
+  </g>
+  <path d="M62 132H1140" stroke="#dadcd1"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <circle cx="68" cy="201" r="4" fill="#839577"/>
+    <text x="84" y="205" font-size="11" letter-spacing="2.5" fill="#596a5c">DISEÑO QUE SE SIENTE</text>
+    <g fill="#283e35" font-size="76" font-weight="500" letter-spacing="-4">
+      <text x="62" y="302">Espacios</text><text x="62" y="385">para vivir</text><text x="62" y="468" font-family="Georgia, serif" font-style="italic" fill="#7a896a">mejor.</text>
+    </g>
+    <g fill="#6c756b" font-size="17"><text x="66" y="523">Luz, calma y materiales que cuentan tu historia.</text><text x="66" y="552">Creamos lugares con una forma propia de ser.</text></g>
+    <rect x="63" y="593" width="224" height="57" rx="28.5" fill="#283e35"/>
+    <text x="88" y="628" font-size="14" fill="#fff">Descubre los proyectos</text><text x="258" y="629" font-size="21" fill="#fff">↗</text>
+  </g>
+  <rect x="647" y="172" width="493" height="478" rx="3" fill="url(#wall)"/>
+  <path d="M647 581H1140V650H647Z" fill="#a7987d"/>
+  <path d="M738 586V313a135 135 0 0 1 270 0v273Z" fill="#fff5e1"/>
+  <g clip-path="url(#arch)">
+    <rect x="739" y="177" width="270" height="410" fill="url(#light)"/>
+    <path d="M757 190H817V586H757Z" fill="#fdf9ef"/>
+    <path d="M816 177H827V586H816Z" fill="#c9bda6"/>
+    <path d="M739 542H1008V586H739Z" fill="#cec0a4"/>
+    <path d="M827 545L942 586H795L756 545Z" fill="#f6edd7"/>
+    <path d="M830 176L934 183L1020 555L1000 586H942Z" fill="#ffffff" opacity=".22"/>
+  </g>
+  <path d="M1008 316V586H1030V316a157 157 0 0 0-290-83 135 135 0 0 1 268 83Z" fill="#b5a588" opacity=".7"/>
+  <ellipse cx="1004" cy="607" rx="83" ry="13" fill="#685f50" opacity=".13"/>
+  <path d="M968 492H1040L1032 591Q1004 615 976 591Z" fill="url(#shade)"/>
+  <ellipse cx="1004" cy="492" rx="36" ry="8" fill="#897a60"/>
+  <g stroke="#556c4b" stroke-width="4" fill="none"><path d="M1004 495Q1000 435 971 375"/><path d="M1004 495Q1010 430 1056 396"/><path d="M1004 495Q1000 430 1018 331"/></g>
+  <g fill="#647959"><ellipse cx="967" cy="390" rx="13" ry="35" transform="rotate(-35 967 390)"/><ellipse cx="1052" cy="405" rx="12" ry="31" transform="rotate(45 1052 405)"/><ellipse cx="1018" cy="360" rx="12" ry="37" transform="rotate(13 1018 360)"/><ellipse cx="986" cy="436" rx="12" ry="26" transform="rotate(-50 986 436)"/><ellipse cx="1027" cy="449" rx="12" ry="25" transform="rotate(48 1027 449)"/></g>
+  <rect x="676" y="608" width="155" height="29" rx="14.5" fill="#fffdf7" opacity=".9"/>
+  <text x="693" y="627" fill="#4c5d4d" font-family="Arial, Helvetica, sans-serif" font-size="10" letter-spacing="1.2">MENOS RUIDO. MÁS VIDA.</text>
+  <path d="M62 698H1140" stroke="#dadcd1"/>
+  <g fill="#596a5c" font-family="Arial, Helvetica, sans-serif" font-size="13"><text x="62" y="748">01 / Arquitectura</text><text x="415" y="748">02 / Interiorismo</text><text x="803" y="748">03 / Espacios con identidad</text></g>
+</svg>
