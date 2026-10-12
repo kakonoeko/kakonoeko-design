@@ -174,7 +174,7 @@ briefForm.addEventListener('submit', event => {
   const body = `Hola, Kakonoeko Design:\n\nSoy ${name}.\nNegocio: ${business || 'Por definir'}\n\n${message}\n\nMe gustaría hablar sobre mi proyecto web.\nGracias.`;
   const gmailUrl = gmailCompose(subject, body);
   document.querySelector('.gmail-fallback').href = gmailUrl;
-  document.getElementById('form-status').textContent = 'Tu consulta está preparada. Revisa y envía el mensaje en Gmail. Si no se abre, utiliza el enlace de abajo.';
+  document.getElementById('form-status').textContent = 'El borrador está preparado para abrirlo en Gmail. Revisa el mensaje allí y decide si enviarlo. Si no se abre, utiliza el enlace de abajo.';
   window.open(gmailUrl, '_blank', 'noopener,noreferrer');
 });
 document.getElementById('year').textContent = new Date().getFullYear();

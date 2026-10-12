@@ -37,3 +37,9 @@ El portfolio contiene propuestas de diseño que no se presentan como webs oficia
 Revisar la navegación, los cuatro estados de Repariko y las galerías de Invicto y artista, apertura y cierre con Escape de las capturas, el menú en móvil y la preparación de un mensaje. Comprobar los enlaces activos de WhatsApp y teléfono, el orden del portfolio antes de Instagram y la presentación de Gabriel Lojo.
 
 © Kakonoeko Design. Los recursos de marca y portfolio se conservan para este proyecto; no se añade una licencia de reutilización por terceros.
+
+## Privacidad y cookies
+
+El aviso de cookies es informativo: no se instalan cookies propias, analítica ni publicidad. Cerrarlo no guarda preferencias. `cookies.html`, `privacidad.html` e `informacion-legal.html` describen el funcionamiento revisado. El formulario incluye información previa sobre la apertura del borrador en Gmail y no tiene un servidor de envío. La CSP bloquea recursos y conexiones de scripts externos y el envío nativo del formulario.
+
+La información de identificación comercial del artículo 10 LSSI no está completa porque el titular no autoriza publicar esos datos. No se han incorporado datos privados aportados en la conversación. Estas páginas no certifican el cumplimiento integral de la actividad.
