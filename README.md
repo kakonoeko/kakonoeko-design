@@ -28,7 +28,7 @@ El archivo `.nojekyll` permite publicar los archivos estáticos directamente.
 
 ## Contacto y privacidad
 
-Todos los enlaces de correo abren Gmail. El formulario prepara un mensaje en Gmail, con destinatario, asunto y texto completados. No envía mensajes automáticamente, no guarda datos y no tiene un servidor de recogida de consultas. El enlace alternativo de Gmail incorpora la consulta cuando se prepara. Los perfiles sociales se abren con enlaces normales; no se incorporan widgets, analítica ni cookies de seguimiento.
+Todos los enlaces de correo abren Gmail. El formulario prepara un mensaje de WhatsApp para el número de contacto configurado. No envía mensajes automáticamente, no guarda datos y no tiene un servidor de recogida de consultas. El enlace alternativo de WhatsApp incorpora la consulta cuando se prepara. Los perfiles sociales se abren con enlaces normales; no se incorporan widgets, analítica ni cookies de seguimiento.
 
 El portfolio contiene propuestas de diseño que no se presentan como webs oficiales en uso. Las capturas de Repariko se muestran sin barra de administración; sus datos internos pertenecen a esa demostración y no son datos de contacto de Kakonoeko. La propuesta de artista conserva la identidad pixelada.
 
@@ -40,6 +40,6 @@ Revisar la navegación, los cuatro estados de Repariko y las galerías de Invict
 
 ## Privacidad y cookies
 
-El aviso de cookies es informativo: no se instalan cookies propias, analítica ni publicidad. Cerrarlo no guarda preferencias. `cookies.html`, `privacidad.html` e `informacion-legal.html` describen el funcionamiento revisado. El formulario incluye información previa sobre la apertura del borrador en Gmail y no tiene un servidor de envío. La CSP bloquea recursos y conexiones de scripts externos y el envío nativo del formulario.
+El aviso de cookies es informativo: no se instalan cookies propias, analítica ni publicidad. Cerrarlo no guarda preferencias. `cookies.html`, `privacidad.html` e `informacion-legal.html` describen el funcionamiento revisado. El formulario explica antes de continuar que se comparte el texto con WhatsApp y muestra la información de privacidad debajo del botón y no tiene un servidor de envío. La CSP bloquea recursos y conexiones de scripts externos y el envío nativo del formulario.
 
 La información de identificación comercial del artículo 10 LSSI no está completa porque el titular no autoriza publicar esos datos. No se han incorporado datos privados aportados en la conversación. Estas páginas no certifican el cumplimiento integral de la actividad.

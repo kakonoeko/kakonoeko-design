@@ -100,7 +100,6 @@ document.querySelectorAll('[data-gmail-link]').forEach(link => {
   link.target = '_blank';
   link.rel = 'noopener noreferrer';
 });
-document.querySelector('.gmail-fallback').href = gmailCompose();
 document.querySelectorAll('[data-instagram-link]').forEach(link => link.href = config.instagram);
 document.querySelectorAll('[data-tiktok-link]').forEach(link => link.href = config.tiktok);
 document.querySelectorAll('[data-email-link]').forEach(link => {
@@ -170,11 +169,14 @@ briefForm.addEventListener('submit', event => {
     document.getElementById('form-status').textContent = 'Escribe tu nombre y una breve descripción de tu idea.';
     return;
   }
-  const subject = `Mi primera web · ${business || name}`;
   const body = `Hola, Kakonoeko Design:\n\nSoy ${name}.\nNegocio: ${business || 'Por definir'}\n\n${message}\n\nMe gustaría hablar sobre mi proyecto web.\nGracias.`;
-  const gmailUrl = gmailCompose(subject, body);
-  document.querySelector('.gmail-fallback').href = gmailUrl;
-  document.getElementById('form-status').textContent = 'El borrador está preparado para abrirlo en Gmail. Revisa el mensaje allí y decide si enviarlo. Si no se abre, utiliza el enlace de abajo.';
-  window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+  if (!whatsappReady) {
+    document.getElementById('form-status').textContent = 'WhatsApp no está disponible. Puedes utilizar el correo de contacto.';
+    return;
+  }
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(body)}`;
+  document.querySelector('.consultation-fallback').href = whatsappUrl;
+  document.getElementById('form-status').textContent = 'Tu consulta está preparada para WhatsApp. Revisa el mensaje allí y decide si enviarlo. Si no se abre, utiliza el enlace de abajo.';
+  window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
 });
 document.getElementById('year').textContent = new Date().getFullYear();
