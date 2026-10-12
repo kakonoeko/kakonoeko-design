@@ -1,5 +1,9 @@
 'use strict';
 const config = window.KAKONOEKO_CONFIG;
+// Mantener el destino de los enlaces antiguos a la sección de contacto.
+if (window.location?.hash === '#contacto' && !document.getElementById('contacto')) {
+  window.location.replace('contacto.html');
+}
 const menuToggle = document.querySelector('.menu-toggle');
 const navigation = document.getElementById('navigation');
 function closeMenu() {

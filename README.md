@@ -23,12 +23,15 @@ El archivo `.nojekyll` permite publicar los archivos estáticos directamente.
 - `index.html`: contenido y estructura.
 - `styles.css`: diseño y adaptación a pantallas.
 - `script.js`: menú móvil, contactos y preparación de consultas.
+- `contacto.html`: canales de contacto, formulario para WhatsApp e información de privacidad.
 - `portfolio.html`: página independiente con las propuestas de Invicto, artista y Repariko.
 - `portfolio.js`: galerías, pestañas de Repariko y ampliación de capturas.
 - `config.js`: correo, perfiles sociales y números de teléfono y WhatsApp.
 - `assets/`: logos originales y las cuatro capturas facilitadas por el propietario.
 
 ## Contacto y privacidad
+
+La sección de consultas se encuentra en `contacto.html`, accesible desde el menú desplegable y las llamadas a la acción.
 
 Todos los enlaces de correo abren Gmail. El formulario prepara un mensaje de WhatsApp para el número de contacto configurado. No envía mensajes automáticamente, no guarda datos y no tiene un servidor de recogida de consultas. El enlace alternativo de WhatsApp incorpora la consulta cuando se prepara. Los perfiles sociales se abren con enlaces normales; no se incorporan widgets, analítica ni cookies de seguimiento.
 
