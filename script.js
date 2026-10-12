@@ -44,7 +44,7 @@ function selectProject(number, moveFocus = false) {
   document.getElementById('project-panel').setAttribute('aria-labelledby', `tab-${number}`);
   document.getElementById('project-image').src = `assets/repariko-${number}.png`;
   document.getElementById('project-image').alt = `Página de ${project.name.toLowerCase()} de Repariko`;
-  document.querySelector('.project-image-button').setAttribute('aria-label', `Ampliar captura: ${project.name} de Repariko`);
+  document.querySelector('#project-panel .project-image-button').setAttribute('aria-label', `Ampliar captura: ${project.name} de Repariko`);
   document.getElementById('project-number').textContent = `0${number} / ${project.name.toUpperCase()}`;
   document.getElementById('project-title').textContent = project.title;
   document.getElementById('project-copy').textContent = project.copy;
@@ -72,8 +72,15 @@ function showCapture(number) {
   image.alt = `Captura completa de la página de ${project.name.toLowerCase()} de Repariko`;
   captureDialog.showModal();
 }
-document.querySelector('.project-image-button').addEventListener('click', () => showCapture(activeProject));
+document.querySelector('#project-panel .project-image-button').addEventListener('click', () => showCapture(activeProject));
 document.querySelectorAll('[data-capture]').forEach(button => button.addEventListener('click', () => showCapture(Number(button.dataset.capture))));
+document.querySelectorAll('[data-gallery-image]').forEach(button => button.addEventListener('click', () => {
+  document.getElementById('capture-dialog-title').textContent = button.dataset.galleryTitle;
+  const image = document.getElementById('capture-dialog-image');
+  image.src = button.dataset.galleryImage;
+  image.alt = `Captura de la web de ${button.dataset.galleryTitle}`;
+  captureDialog.showModal();
+}));
 document.querySelectorAll('dialog').forEach(dialog => {
   dialog.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', event => {
