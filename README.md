@@ -30,7 +30,7 @@ El archivo `.nojekyll` permite publicar los archivos estáticos directamente.
 
 ## Contacto y privacidad
 
-El formulario prepara un correo en la aplicación del visitante. No envía mensajes automáticamente, no guarda datos y no tiene un servidor de recogida de consultas. El enlace alternativo de Gmail incorpora la consulta cuando se prepara. Los perfiles sociales se abren con enlaces normales; no se incorporan widgets, analítica ni cookies de seguimiento.
+Todos los enlaces de correo abren Gmail. El formulario prepara un mensaje en Gmail, con destinatario, asunto y texto completados. No envía mensajes automáticamente, no guarda datos y no tiene un servidor de recogida de consultas. El enlace alternativo de Gmail incorpora la consulta cuando se prepara. Los perfiles sociales se abren con enlaces normales; no se incorporan widgets, analítica ni cookies de seguimiento.
 
 Las capturas del portfolio muestran el diseño de Repariko tal como se facilitó; sus datos internos pertenecen a esa demostración y no son datos de contacto de Kakonoeko.
 

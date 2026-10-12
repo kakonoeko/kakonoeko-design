@@ -82,10 +82,22 @@ document.querySelectorAll('dialog').forEach(dialog => {
   });
 });
 
+function gmailCompose(subject = '', body = '') {
+  const parameters = new URLSearchParams({ view: 'cm', fs: '1', to: config.email });
+  if (subject) parameters.set('su', subject);
+  if (body) parameters.set('body', body);
+  return `https://mail.google.com/mail/?${parameters}`;
+}
+document.querySelectorAll('[data-gmail-link]').forEach(link => {
+  link.href = gmailCompose(link.dataset.gmailSubject || '');
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+});
+document.querySelector('.gmail-fallback').href = gmailCompose();
 document.querySelectorAll('[data-instagram-link]').forEach(link => link.href = config.instagram);
 document.querySelectorAll('[data-tiktok-link]').forEach(link => link.href = config.tiktok);
 document.querySelectorAll('[data-email-link]').forEach(link => {
-  link.href = `mailto:${config.email}`;
+  link.href = gmailCompose();
   link.firstChild.textContent = `${config.email} `;
 });
 const whatsappNumber = config.whatsappNumber.trim();
@@ -119,9 +131,9 @@ briefForm.addEventListener('submit', event => {
   }
   const subject = `Mi primera web · ${business || name}`;
   const body = `Hola, Kakonoeko Design:\n\nSoy ${name}.\nNegocio: ${business || 'Por definir'}\n\n${message}\n\nMe gustaría hablar sobre mi proyecto web.\nGracias.`;
-  const query = `subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  document.querySelector('.gmail-fallback').href = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(config.email)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  document.getElementById('form-status').textContent = 'Tu consulta está preparada. Envíala desde tu aplicación de correo. Si no se abre, utiliza el enlace de Gmail.';
-  window.location.href = `mailto:${config.email}?${query}`;
+  const gmailUrl = gmailCompose(subject, body);
+  document.querySelector('.gmail-fallback').href = gmailUrl;
+  document.getElementById('form-status').textContent = 'Tu consulta está preparada. Revisa y envía el mensaje en Gmail. Si no se abre, utiliza el enlace de abajo.';
+  window.open(gmailUrl, '_blank', 'noopener,noreferrer');
 });
 document.getElementById('year').textContent = new Date().getFullYear();
