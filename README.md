@@ -22,7 +22,9 @@ El archivo `.nojekyll` permite publicar los archivos estáticos directamente.
 
 - `index.html`: contenido y estructura.
 - `styles.css`: diseño y adaptación a pantallas.
-- `script.js`: menú móvil, portfolio, ampliación de capturas y preparación de consultas.
+- `script.js`: menú móvil, contactos y preparación de consultas.
+- `portfolio.html`: página independiente con las propuestas de Invicto, artista y Repariko.
+- `portfolio.js`: galerías, pestañas de Repariko y ampliación de capturas.
 - `config.js`: correo, perfiles sociales y números de teléfono y WhatsApp.
 - `assets/`: logos originales y las cuatro capturas facilitadas por el propietario.
 
@@ -34,7 +36,7 @@ El portfolio contiene propuestas de diseño que no se presentan como webs oficia
 
 ## Validación
 
-Revisar la navegación, los cuatro estados de Repariko y las galerías de Invicto y artista, apertura y cierre con Escape de las capturas, el menú en móvil y la preparación de un mensaje. Comprobar los enlaces activos de WhatsApp y teléfono, el orden del portfolio antes de Instagram y la presentación de Gabriel Lojo.
+Revisar la navegación, los cuatro estados de Repariko y las galerías de Invicto y artista, apertura y cierre con Escape de las capturas, el menú en móvil y la preparación de un mensaje. Comprobar los enlaces activos de WhatsApp y teléfono, el acceso al portfolio independiente desde el menú y las llamadas a la acción y la presentación de Gabriel Lojo.
 
 © Kakonoeko Design. Los recursos de marca y portfolio se conservan para este proyecto; no se añade una licencia de reutilización por terceros.
 
