@@ -23,6 +23,7 @@ El archivo `.nojekyll` permite publicar los archivos estáticos directamente.
 - `index.html`: contenido y estructura.
 - `styles.css`: diseño y adaptación a pantallas.
 - `script.js`: menú móvil, contactos y preparación de consultas.
+- `preguntas-frecuentes.html`: dudas sobre diseño web y gestión de redes con respuestas desplegables.
 - `contacto.html`: canales de contacto, formulario para WhatsApp e información de privacidad.
 - `portfolio.html`: página independiente con las propuestas de Invicto, artista y Repariko.
 - `portfolio.js`: galerías, pestañas de Repariko y ampliación de capturas.
@@ -33,7 +34,7 @@ El archivo `.nojekyll` permite publicar los archivos estáticos directamente.
 
 La sección de consultas se encuentra en `contacto.html`, accesible desde el menú desplegable y las llamadas a la acción.
 
-Todos los enlaces de correo abren Gmail. El formulario prepara un mensaje de WhatsApp para el número de contacto configurado. No envía mensajes automáticamente, no guarda datos y no tiene un servidor de recogida de consultas. El enlace alternativo de WhatsApp incorpora la consulta cuando se prepara. Los perfiles sociales se abren con enlaces normales; no se incorporan widgets, analítica ni cookies de seguimiento.
+Todos los enlaces de correo abren Gmail. El formulario prepara un mensaje de WhatsApp para el número de contacto configurado. No envía mensajes automáticamente, no guarda datos y no tiene un servidor de recogida de consultas. Los perfiles sociales se abren con enlaces normales; no se incorporan widgets, analítica ni cookies de seguimiento.
 
 El portfolio contiene propuestas de diseño que no se presentan como webs oficiales en uso. Las capturas de Repariko se muestran sin barra de administración; sus datos internos pertenecen a esa demostración y no son datos de contacto de Kakonoeko. La propuesta de artista conserva la identidad pixelada.
 

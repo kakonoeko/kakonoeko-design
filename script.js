@@ -125,8 +125,7 @@ if (briefForm) briefForm.addEventListener('submit', event => {
     return;
   }
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(body)}`;
-  document.querySelector('.consultation-fallback').href = whatsappUrl;
-  document.getElementById('form-status').textContent = 'Tu consulta está preparada para WhatsApp. Revisa el mensaje allí y decide si enviarlo. Si no se abre, utiliza el enlace de abajo.';
+  document.getElementById('form-status').textContent = 'Tu consulta está preparada para WhatsApp. Revisa el mensaje allí y decide si enviarlo. ';
   window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
 });
 document.getElementById('year').textContent = new Date().getFullYear();
