@@ -102,6 +102,20 @@ document.querySelectorAll('[data-email-link]').forEach(link => {
 });
 const whatsappNumber = config.whatsappNumber.trim();
 const whatsappReady = /^[1-9]\d{7,14}$/.test(whatsappNumber);
+const whatsappWidget = document.querySelector('[data-whatsapp-widget]');
+if (whatsappWidget && whatsappReady) {
+  const button = whatsappWidget.querySelector('button');
+  const link = document.createElement('a');
+  link.className = button.className;
+  link.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(config.whatsappMessage)}`;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  link.setAttribute('aria-label', 'Contactar por WhatsApp');
+  link.title = 'Hablemos por WhatsApp';
+  link.append(...button.childNodes);
+  button.replaceWith(link);
+  whatsappWidget.querySelector('.floating-whatsapp-note').textContent = 'WhatsApp';
+}
 document.querySelectorAll('[data-whatsapp-link]').forEach(link => {
   if (whatsappReady) {
     link.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(config.whatsappMessage)}`;
