@@ -109,17 +109,29 @@ document.querySelectorAll('[data-whatsapp-link]').forEach(link => {
 });
 
 const briefForm = document.getElementById('brief-form');
+const serviceLabels = Object.freeze({ web: 'Diseño Web', redes: 'Gestión de Redes', ambos: 'Diseño Web y Gestión de Redes' });
+if (briefForm) {
+  const requestedService = new URLSearchParams(window.location?.search || '').get('servicio');
+  if (Object.prototype.hasOwnProperty.call(serviceLabels, requestedService)) {
+    document.getElementById('service-selector').value = requestedService;
+  }
+}
 if (briefForm) briefForm.addEventListener('submit', event => {
   event.preventDefault();
   const data = new FormData(briefForm);
   const name = String(data.get('name') || '').trim();
   const business = String(data.get('business') || '').trim();
   const message = String(data.get('message') || '').trim();
+  const service = String(data.get('service') || '');
+  if (!Object.prototype.hasOwnProperty.call(serviceLabels, service)) {
+    document.getElementById('form-status').textContent = 'Selecciona el servicio que te interesa.';
+    return;
+  }
   if (!name || !message) {
     document.getElementById('form-status').textContent = 'Escribe tu nombre y una breve descripción de tu idea.';
     return;
   }
-  const body = `Hola, Kakonoeko Design:\n\nSoy ${name}.\nNegocio: ${business || 'Por definir'}\n\n${message}\n\nMe gustaría hablar sobre mi proyecto web.\nGracias.`;
+  const body = `Hola, Kakonoeko Design:\n\nSoy ${name}.\nNegocio: ${business || 'Por definir'}\nServicio: ${serviceLabels[service]}\n\n${message}\n\nMe gustaría recibir más información sobre este servicio.\nGracias.`;
   if (!whatsappReady) {
     document.getElementById('form-status').textContent = 'WhatsApp no está disponible. Puedes utilizar el correo de contacto.';
     return;
