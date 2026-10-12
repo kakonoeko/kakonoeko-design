@@ -101,27 +101,47 @@ document.querySelectorAll('[data-email-link]').forEach(link => {
   link.firstChild.textContent = `${config.email} `;
 });
 const whatsappNumber = config.whatsappNumber.trim();
+const phoneNumber = (config.phoneNumber || whatsappNumber).trim();
+function displayPhone(number) {
+  return /^34\d{9}$/.test(number) ? `+34 ${number.slice(2, 5)} ${number.slice(5, 8)} ${number.slice(8)}` : `+${number}`;
+}
+document.querySelectorAll('[data-phone-link]').forEach(link => {
+  link.href = `tel:+${phoneNumber}`;
+  link.querySelector('[data-phone-display]').textContent = displayPhone(phoneNumber);
+});
 const whatsappReady = /^[1-9]\d{7,14}$/.test(whatsappNumber);
 const whatsappWidget = document.querySelector('[data-whatsapp-widget]');
 if (whatsappWidget && whatsappReady) {
-  const button = whatsappWidget.querySelector('button');
-  const link = document.createElement('a');
-  link.className = button.className;
+  const control = whatsappWidget.querySelector('.floating-whatsapp-button');
+  const link = control.tagName === 'A' ? control : document.createElement('a');
+  link.className = control.className;
   link.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(config.whatsappMessage)}`;
   link.target = '_blank';
   link.rel = 'noopener noreferrer';
   link.setAttribute('aria-label', 'Contactar por WhatsApp');
   link.title = 'Hablemos por WhatsApp';
-  link.append(...button.childNodes);
-  button.replaceWith(link);
+  if (control !== link) {
+    link.append(...control.childNodes);
+    control.replaceWith(link);
+  }
   whatsappWidget.querySelector('.floating-whatsapp-note').textContent = 'WhatsApp';
+} else if (whatsappWidget) {
+  const control = whatsappWidget.querySelector('.floating-whatsapp-button');
+  const button = document.createElement('button');
+  button.className = control.className;
+  button.type = 'button';
+  button.disabled = true;
+  button.setAttribute('aria-label', 'WhatsApp, próximamente');
+  button.append(...control.childNodes);
+  control.replaceWith(button);
+  whatsappWidget.querySelector('.floating-whatsapp-note').textContent = 'Próximamente';
 }
 document.querySelectorAll('[data-whatsapp-link]').forEach(link => {
   if (whatsappReady) {
     link.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(config.whatsappMessage)}`;
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
-    link.querySelector('[data-whatsapp-status]').textContent = 'Cuéntame tu proyecto';
+    link.querySelector('[data-whatsapp-status]').textContent = `${displayPhone(whatsappNumber)} · Escríbeme`;
     link.querySelector('[data-whatsapp-badge]').textContent = '↗';
     link.querySelector('[data-whatsapp-badge]').classList.remove('soon');
   } else {

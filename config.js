@@ -4,6 +4,7 @@ window.KAKONOEKO_CONFIG = Object.freeze({
   email: 'gseijas99@gmail.com',
   instagram: 'https://www.instagram.com/kakonoekodesign/',
   tiktok: 'https://www.tiktok.com/@kakonoekodesign',
-  whatsappNumber: '',
-  whatsappMessage: 'Hola, me gustaría hablar sobre una web para mi negocio.'
+  phoneNumber: '34624751521',
+  whatsappNumber: '34624751521',
+  whatsappMessage: 'Hola, me gustaría hacer una consulta sobre diseño web o gestión de Instagram.'
 });

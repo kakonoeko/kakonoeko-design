@@ -7,13 +7,11 @@ Rediseño de la web de Kakonoeko Design: diseño adaptable, llamadas a la acció
 Publicación prevista en https://kakonoeko.github.io/kakonoeko-design/.
 También se puede abrir `index.html` directamente, sin instalación ni compilación.
 
-## Activar WhatsApp cuando llegue el número
+## Teléfono y WhatsApp
 
-1. Abre `config.js`.
-2. Sustituye `whatsappNumber: ''` por el número completo entre comillas, con prefijo internacional y solo dígitos (sin `+`, espacios ni guiones).
-3. Guarda el cambio en GitHub. El botón cambia automáticamente de «Próximamente» a «Cuéntame tu proyecto» y abre WhatsApp con un mensaje preparado.
+Contacto activo: **+34 624 751 521**. La web ofrece llamadas para consultas y enlaces directos a WhatsApp, incluido el botón flotante.
 
-El número está vacío a propósito. No se publica un teléfono provisional ni se utiliza el teléfono que aparece dentro de las capturas de Repariko.
+Para cambiarlo, actualiza `phoneNumber` y `whatsappNumber` en `config.js`, con prefijo internacional y solo dígitos. Los enlaces iniciales en `index.html` también incluyen el número para funcionar sin JavaScript. Si se deja vacío `whatsappNumber`, el botón flotante vuelve a estar desactivado.
 
 ## Publicar con GitHub Pages
 
