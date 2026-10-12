@@ -98,7 +98,7 @@ document.querySelectorAll('[data-instagram-link]').forEach(link => link.href = c
 document.querySelectorAll('[data-tiktok-link]').forEach(link => link.href = config.tiktok);
 document.querySelectorAll('[data-email-link]').forEach(link => {
   link.href = gmailCompose();
-  link.firstChild.textContent = `${config.email} `;
+  link.querySelector('[data-email-address]').textContent = config.email;
 });
 const whatsappNumber = config.whatsappNumber.trim();
 const phoneNumber = (config.phoneNumber || whatsappNumber).trim();
